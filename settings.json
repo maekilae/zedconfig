@@ -1,12 +1,212 @@
 {
+    "ssh_connections": [
+        {
+            "host": "192.168.1.36",
+            "username": "root",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/opt/homepage"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/root"
+                    ]
+                }
+            ]
+        },
+        {
+            "host": "192.168.1.14",
+            "username": "root",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/etc"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/opt/glance"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/opt/glance_data"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/root"
+                    ]
+                }
+            ]
+        },
+        {
+            "host": "192.168.1.10",
+            "username": "root",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/etc/caddy"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/root"
+                    ]
+                }
+            ]
+        },
+        {
+            "host": "192.168.1.138",
+            "username": "root",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/homeassistant/./"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/homeassistant/www"
+                    ]
+                }
+            ]
+        },
+        {
+            "host": "10.4.26.11",
+            "username": "root",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/etc/caddy/./"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/root"
+                    ]
+                }
+            ]
+        },
+        {
+            "host": "home.anycloud.dev",
+            "username": "root",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/opt/./"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/root"
+                    ]
+                }
+            ]
+        },
+        {
+            "host": "10.4.26.21",
+            "username": "root",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/opt/glance"
+                    ]
+                },
+                {
+                    "paths": [
+                        "/opt/glance_data/./"
+                    ]
+                }
+            ]
+        },
+        {
+            "host": "10.4.26.20",
+            "username": "root",
+            "args": [],
+            "projects": [
+                {
+                    "paths": [
+                        "/etc/caddy/./"
+                    ]
+                }
+            ]
+        }
+    ],
+    "cli_default_open_behavior": "existing_window",
+    "agent_servers": {
+        "claude-acp": {
+            "default_config_options": {
+                "model": "opus",
+                "effort": "high",
+                "mode": "auto"
+            },
+            "type": "registry",
+        },
+    },
+    "outline_panel": {
+        "dock": "left",
+    },
+    "collaboration_panel": {
+        "dock": "left",
+    },
+    "git_panel": {
+        "dock": "left",
+    },
+    "language_models": {
+        "open_router": {
+            "api_url": "https://openrouter.ai/api/v1",
+            "available_models": [
+                {
+                    "name": "google/gemini-2.0-flash-thinking-exp",
+                    "display_name": "Gemini 2.0 Flash (Thinking)",
+                    "max_tokens": 200000,
+                    "max_output_tokens": 8192,
+                    "supports_tools": true,
+                    "supports_images": true,
+                    "mode": {
+                        "type": "thinking",
+                        "budget_tokens": 8000,
+                    },
+                },
+                {
+                    "name": "moonshotai/kimi-k3",
+                    "display_name": "kimi-k3",
+                    "max_tokens": 200000,
+                    "max_output_tokens": 8192,
+                    "supports_tools": true,
+                    "supports_images": false,
+                    "mode": {
+                        "type": "thinking",
+                        "budget_tokens": 8000,
+                    },
+                },
+            ],
+        },
+    },
     "agent": {
+        "dock": "right",
         "default_model": {
-            "provider": "zed.dev",
-            "model": "claude-sonnet-4-5",
-            "enable_thinking": true
+            "provider": "openrouter",
+            "model": "moonshotai/kimi-k3",
+            "enable_thinking": true,
         },
         "favorite_models": [],
-        "model_parameters": []
+        "model_parameters": [],
+        "commit_message_model": {
+            "provider": "openrouter",
+            "model": "google/gemini-2.0-flash-thinking-exp",
+            "enable_thinking": false,
+        },
     },
     "edit_predictions": {
         "disabled_globs": [
@@ -25,7 +225,7 @@
             "**/build",
             "**/dist",
             "**/coverage",
-            "**/.venv",
+            "**/.evnv",
             "**/__pycache__",
             "**/.ropeproject",
             "**/.pytest_cache",
@@ -110,6 +310,12 @@
                 "arguments": ["-E", "additional-args"],
             },
         },
+        "tinymist": {
+            "settings": {
+                "exportPdf": "onSave",
+                "outputPath": "$root/$name",
+            },
+        },
     },
     "languages": {
         "C": {
@@ -132,7 +338,7 @@
     "buffer_font_size": 15,
     "agent_buffer_font_size": 13,
     "theme": {
-        "mode": "system",
+        "mode": "dark",
         "light": "One Light",
         "dark": "Vague",
     },

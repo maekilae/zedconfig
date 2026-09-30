@@ -6,10 +6,6 @@
             // Git
             "space g h d": "editor::ToggleSelectedDiffHunks",
             "space g h r": "git::Restore",
-            "space g g": "git_panel::ToggleFocus",
-            "space g b": "editor::ToggleGitBlame",
-            "] h": "editor::GoToHunk",
-            "[ h": "editor::GoToPreviousHunk",
 
             // Toggle inlay hints
             "space t i": "editor::ToggleInlayHints",
@@ -27,12 +23,7 @@
             // Open recent project
             "space f p": "projects::OpenRecent",
             // Search word under cursor
-            "space s w": "pane::DeploySearch",
-            // Live grep
-            "space /": "pane::DeploySearch",
-            // Buffer switcher
-            "space b b": "tab_switcher::Toggle",
-            "space ,": "file_finder::Toggle",
+            // "space s w": "pane::DeploySearch",
 
             // Chat with AI
             "space a a": "assistant::ToggleFocus",
@@ -50,7 +41,6 @@
 
             // +LSP
             "space .": "editor::ToggleCodeActions",
-            "shift-k": "editor::Hover",
             "g d": "editor::GoToDefinition",
             "g D": "editor::GoToDefinitionSplit",
             "g i": "editor::GoToImplementation",
@@ -82,15 +72,6 @@
             "shift-l": "pane::ActivateNextItem",
             "shift-h": "pane::ActivatePreviousItem",
             "space v": "pane::SplitRight",
-            "space s h": "pane::SplitDown",
-            "space w": "workspace::Save",
-            "space b d": "pane::CloseActiveItem",
-            "space b o": "pane::CloseOtherItems",
-            "space t t": "terminal_panel::ToggleFocus",
-            "space u l": "editor::ToggleLineNumbers",
-            "space u m": "editor::ToggleMinimap",
-            "g c": "editor::ToggleComments",
-            "g c c": "editor::ToggleComments",
             "space h": "workspace::ActivateNextPane",
             "space l": "workspace::ActivatePreviousPane",
             "space c a": "editor::ToggleCodeActions",
